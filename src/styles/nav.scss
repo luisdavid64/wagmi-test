@@ -1,0 +1,23 @@
+@import "./color.scss";
+.nav {
+    background-color: $color-blue;
+    color: $color-white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+        background-color: $color-white;
+        color: $color-blue;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-right: 1rem;
+    }
+
+    h1 {
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+}
+

@@ -1,0 +1,19 @@
+@import "./color.scss";
+
+table, td, th {
+    border: 1px solid black;
+    min-width: 300px;
+    text-align: center;
+    padding: 1rem;
+}
+
+input {
+    border-bottom: 1px solid $color-blue;
+    margin: 1rem;
+    padding: 0 1rem;
+}
+
+input.transaction {
+    margin: 2rem 1rem;
+    padding:  0 1rem;
+}

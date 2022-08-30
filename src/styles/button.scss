@@ -1,0 +1,11 @@
+@import "./color.scss";
+.button {
+    padding: 1rem;
+    min-width: 100px;
+    border-radius: 8px;
+    background-color: $color-blue;
+    color: $color-white;
+    &:hover {
+        background-color: $color-blue-hover;
+    }
+}
