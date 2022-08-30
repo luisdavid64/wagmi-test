@@ -1,10 +1,12 @@
 /* Usage of Transaction Hooks. It is good to fetch parameters 
    required for sending a transaction such as the gas estimate.
+   One can check fee data using useFeeData
 */
-import { useSendTransaction, usePrepareSendTransaction, useAccount, useWaitForTransaction} from 'wagmi'
+import { useFeeData, useSendTransaction, usePrepareSendTransaction, useAccount, useWaitForTransaction} from 'wagmi'
 import {useState} from 'react';
 import {useDebounce} from 'use-debounce';
 import {utils} from "ethers";
+
 
 
 function TransactionForm() {
@@ -24,11 +26,12 @@ function TransactionForm() {
     const { isLoading, isSuccess } = useWaitForTransaction({
         hash: data?.hash,
       })
-
+    const { data: feeData, isError, isLoading: isFeeLoading } = useFeeData()
     const onSubmit = (e) => {
         e.preventDefault()
         sendTransaction?.()
     }
+    console.log(feeData)
 
     if(!isConnected) return <></>
     return (
@@ -58,6 +61,11 @@ function TransactionForm() {
                             className="transaction"
                             value={amount}
                         />
+                    </div>
+                    <div>
+                    {isFeeLoading && <p>Fetching fee data…</p>}
+                    {isError && <p>Error fetching fee data</p>}
+                    {(!isFeeLoading && !isError) && <p className='centered-text padded'>Gas price: {feeData?.formatted.gasPrice} gwei</p>}
                     </div>
                     <button style={{width: "100%"}} className='button' disabled={!sendTransaction || !to || !amount}>
                         {isLoading ? 'Sending...' : 'Send'}

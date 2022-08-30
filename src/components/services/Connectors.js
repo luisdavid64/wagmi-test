@@ -1,6 +1,7 @@
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
 import { InjectedConnector } from 'wagmi/connectors/injected'
+import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
 import { chain } from 'wagmi'
 const APP_NAME = 'Wagmi Test'
 const APP_LOGO_URL = 'https://example.com/logo.png'
@@ -24,5 +25,11 @@ export const connectors = [
           name: 'Injected',
           shimDisconnect: true,
         },
-    })
+    }),
+    new WalletConnectConnector({
+        chains,
+        options: {
+          qrcode: true,
+        },
+    }),
 ]

@@ -5,7 +5,16 @@
     border-radius: 8px;
     background-color: $color-blue;
     color: $color-white;
+    transition-duration: 0.4s;
+    cursor: pointer;
     &:hover {
         background-color: $color-blue-hover;
+    }
+    
+    &.white {
+        &:hover {
+            background-color: $color-blue;
+            color: $color-white;
+        }
     }
 }

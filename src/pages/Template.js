@@ -4,6 +4,7 @@ import Nav from "./../components/Nav"
 import Profile from '../components/Profile';
 import {useAccount, useDisconnect} from "wagmi"
 import TransactionForm from '../components/TransactionForm';
+import WriteToContract from '../components/WriteToContract';
 
 const Template = () => {
 
@@ -15,14 +16,15 @@ const Template = () => {
         <>
             <Nav>
                 {!isConnected ?
-                    <button onClick={onOpen}>Open Wallet</button>
+                    <button className='button white' onClick={onOpen}>Open Wallet</button>
                     : 
-                    <button onClick={() => disconnect()}>Disconnect Wallet</button>
+                    <button className='button white' onClick={() => disconnect()}>Disconnect Wallet</button>
                 }
             </Nav>
             <WalletModal isOpen={isOpen} closeModal={onClose} />
             <Profile />
             <TransactionForm />
+            <WriteToContract />
         </>
     )
 }

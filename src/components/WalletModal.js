@@ -10,7 +10,7 @@ import {
     Button,
     Text,
 } from '@chakra-ui/react'
-import { useConnect, useAccount } from 'wagmi'
+import { useConnect } from 'wagmi'
 
 
 function WalletModal({

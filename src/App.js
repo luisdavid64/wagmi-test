@@ -12,7 +12,7 @@ import { connectors } from './components/services/Connectors'
 import Template from './pages/Template'
 
 //Wagmi offers providers for Infura, Alchemy, etc..
-const { chains, provider, webSocketProvider } = configureChains(
+const { provider, webSocketProvider } = configureChains(
   [chain.rinkeby, chain.goerli],
   [infuraProvider({ apiKey: process.env.REACT_APP_INFURA_KEY })],
 )
@@ -21,8 +21,6 @@ const client = createClient({
   provider,
   webSocketProvider,
 })
-
-console.log(client)
 
 function App() {
   return (
