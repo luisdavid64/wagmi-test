@@ -1,3 +1,7 @@
+# Project
+
+The purpose of this project is to test the react hooks of [https://wagmi.sh/](wagmi)
+
 # Getting Started
 
 Run `npm install` to install packages
