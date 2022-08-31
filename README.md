@@ -1,6 +1,6 @@
 # Project
 
-The purpose of this project is to test the react hooks of [https://wagmi.sh/](wagmi)
+The purpose of this project is to test the react hooks of [wagmi](https://wagmi.sh/).
 
 # Getting Started
 
