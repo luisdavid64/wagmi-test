@@ -5,6 +5,7 @@ import Profile from '../components/Profile';
 import {useAccount, useDisconnect} from "wagmi"
 import TransactionForm from '../components/TransactionForm';
 import WriteToContract from '../components/WriteToContract';
+import { SignMessage } from '../components/SignMessage';
 
 const Template = () => {
 
@@ -23,6 +24,7 @@ const Template = () => {
             </Nav>
             <WalletModal isOpen={isOpen} closeModal={onClose} />
             <Profile />
+            <SignMessage/>
             <TransactionForm />
             <WriteToContract />
         </>

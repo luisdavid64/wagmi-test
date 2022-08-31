@@ -1,5 +1,4 @@
-/* Usage of Transaction Hooks. It is good to fetch parameters 
-   required for sending a transaction such as the gas estimate.
+/* Usage of Contract Hooks.
 */
 import {useAccount, usePrepareContractWrite, useContractWrite, useWaitForTransaction } from 'wagmi'
 

@@ -17,3 +17,13 @@ input.transaction {
     margin: 2rem 1rem;
     padding:  0 1rem;
 }
+
+textarea {
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 0 1rem;
+    &.sign {
+        margin: 1rem;
+        padding: 0 1rem;
+    }
+}

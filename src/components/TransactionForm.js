@@ -39,6 +39,7 @@ function TransactionForm() {
             <h2 className='large padded'>Send Transaction</h2>
             <div className='centered flex-v'>
                 <form
+                    className='bordered padded-border'
                     onSubmit={onSubmit}
                 >
                     <div className='flex-v'>
